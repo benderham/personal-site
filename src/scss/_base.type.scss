@@ -1,12 +1,105 @@
-@font-face {
-  font-family: "icon-font";
-  src:url("../fonts/icon-font.eot");
-  src:url("../fonts/icon-font.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/icon-font.woff") format("woff"),
-    url("../fonts/icon-font.ttf") format("truetype"),
-    url("../fonts/icon-font.svg#icon-font") format("svg");
-  font-weight: normal;
-  font-style: normal;
+:root {
+  font-family: 'Lato', sans-serif;
+  font-size: 100%;
+  color: $grey-dark;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: $normal-font;
+}
+
+h1 {
+  @include font-size(27px);
+  text-align: center;
+
+  @include media('>=xs-360') {
+    @include font-size(40.5px);
+  }
+
+  @include media('>=s-600') {
+    @include font-size(60.75px);
+  }
+
+  span {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: $spacing-unit--x-small;
+    @include font-size(12px);
+    line-height: 1.5;
+    font-weight: $light-font;
+    text-transform: uppercase;
+    color: $grey;
+
+    @include media('>=xs-360') {
+      @include font-size(18px);
+      margin-bottom: $spacing-unit--small;
+    }
+    
+    @include media('>=s-600') {
+      margin-bottom: $spacing-unit--medium;
+    }
+  }
+  
+  span::before {
+    content: '';
+    display: block;
+    width: 35%;
+    height: 1px;
+    margin: $spacing-unit--xx-small auto;
+    background-color: $primary-color;
+
+    @include media('>=xs-360') {
+      margin: $spacing-unit--x-small auto;
+      @include font-size(18px);
+    }
+  }
+}
+
+h2 {
+  margin-bottom: $spacing-unit--x-small;
+  @include font-size(27px);
+
+  @include media('>=xs-360') {
+    @include font-size(40.5px);
+  }
+}
+
+h3 {
+  margin-bottom: $spacing-unit--x-small;
+  @include font-size(27px);
+  color: $primary-color;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 $spacing-unit--x-small 0;
+  padding: 0;
+  @include font-size(18px);
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: $light-font;
+  color: $grey;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+ul {
+  @extend %reset-list;
+}
+
+ul li {
+  margin-bottom: $spacing-unit--xx-small;
+  padding-left: $spacing-unit--x-small;
+  @include background-image('right-arrow--pink', 11px 15px);
+  background-repeat: no-repeat;
+  background-position: 0 7px;
+}

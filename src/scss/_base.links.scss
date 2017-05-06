@@ -1,0 +1,12 @@
+a {
+  color: $primary-color;
+  font-weight: $normal-font;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    outline: none;
+  }
+}

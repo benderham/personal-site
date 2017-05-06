@@ -9,6 +9,7 @@
 // - Public mixins
 // - Helper functions
 @import '../../node_modules/include-media/dist/_include-media.scss'; // -- http://include-media.com/
+@import 'tools.animations';
 @import 'tools.mixins';
 @import 'tools.placeholders';
 
@@ -22,6 +23,7 @@
 // - Unclassed HTML elements
 // - H1 - H6, basic links, lists etc
 // - Last layer you see type selectors
+@import 'base.links';
 @import 'base.page';
 @import 'base.type';
 
