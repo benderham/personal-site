@@ -1,0 +1,21 @@
+.page-header {
+  padding: $spacing-unit--medium 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $grey-dark;
+}
+
+.page-header__text {
+  @include font-size(24px);
+  letter-spacing: 1px;
+  font-weight: $light-font;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+}
+
+.page-header .logo {
+  margin-bottom: $spacing-unit--x-small;
+}
